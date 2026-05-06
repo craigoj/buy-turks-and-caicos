@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Juanita Harris — Two Directions for Buy Turks &amp; Caicos</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="Two finalist concepts for Juanita Harris's Turks &amp; Caicos lead-gen landing page. Editorial Atelier and Cinematic Atlantic." />
+<meta name="theme-color" content="#1b1814" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Juanita Harris — Two Directions" />
+<meta property="og:description" content="Two finalist concepts. Editorial Atelier &amp; Cinematic Atlantic." />
+<meta property="og:image" content="assets/og-image.svg" />
+<meta name="twitter:card" content="summary_large_image" />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.unsplash.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  body {
+    font-family: "Inter", -apple-system, system-ui, sans-serif;
+    color: #1b1814;
+    -webkit-font-smoothing: antialiased;
+    animation: pageIn .6s ease-out both;
+  }
+  @keyframes pageIn { from { opacity: 0; } to { opacity: 1; } }
+  a { color: inherit; text-decoration: none; }
+
+  header.site {
+    padding: 56px 56px 24px;
+    border-bottom: 1px solid rgba(27,24,20,0.18);
+    display: grid; grid-template-columns: 1fr auto; gap: 32px; align-items: end;
+  }
+  .wordmark {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px; letter-spacing: -0.01em;
+  }
+  .wordmark .dot { color: #9a6f2c; }
+  .meta {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(27,24,20,0.62);
+  }
+  h1 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400; letter-spacing: -0.02em; line-height: 1;
+    font-size: clamp(48px, 7vw, 88px);
+    margin: 24px 0 16px;
+  }
+  h1 em { font-style: italic; color: #9a6f2c; }
+  .lede {
+    font-size: 17px; line-height: 1.55;
+    color: rgba(27,24,20,0.62);
+    max-width: 640px; margin: 0;
+  }
+
+  .summary {
+    padding: 32px 56px;
+    border-bottom: 1px solid rgba(27,24,20,0.18);
+    display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px;
+  }
+  .summary .item .num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 28px;
+    color: #9a6f2c;
+  }
+  .summary .item .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(27,24,20,0.62);
+    margin-top: 4px;
+  }
+
+  .grid {
+    padding: 56px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 32px;
+  }
+  .card {
+    display: block;
+    border: 1px solid rgba(27,24,20,0.18);
+    background: #fff;
+    transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s;
+    overflow: hidden;
+  }
+  .card:hover { transform: translateY(-4px); box-shadow: 0 24px 48px -24px rgba(27,24,20,0.25); }
+
+  .card .preview {
+    height: 360px;
+    position: relative;
+    overflow: hidden;
+  }
+  .card.editorial .preview {
+    background: #f4f0e6;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center;
+    padding: 48px;
+    border-bottom: 1px solid rgba(27,24,20,0.18);
+  }
+  .card.editorial .preview .display {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px; line-height: 0.95; letter-spacing: -0.02em;
+    color: #1b1814; margin: 0;
+  }
+  .card.editorial .preview .display em { font-style: italic; color: #9a6f2c; }
+
+  .card.cinematic .preview {
+    position: relative;
+    display: flex; flex-direction: column; justify-content: center; align-items: center;
+    text-align: center;
+    padding: 48px;
+    color: #f5efe1;
+    overflow: hidden;
+  }
+  .card.cinematic .preview::before {
+    content: "";
+    position: absolute; inset: 0;
+    background-image:
+      linear-gradient(180deg, rgba(14,31,42,0.45) 0%, rgba(14,31,42,0.15) 40%, rgba(14,31,42,0.85) 100%),
+      url("https://images.unsplash.com/photo-1536276214783-1ae17228588a?w=1200&q=80&auto=format&fit=crop");
+    background-size: cover;
+    background-position: center;
+    z-index: 0;
+  }
+  .card.cinematic .preview > * { position: relative; z-index: 1; }
+  .card.cinematic .preview .display-up {
+    font-family: "Inter", sans-serif;
+    font-size: 56px; font-weight: 500; letter-spacing: -0.04em; line-height: 0.92;
+  }
+  .card.cinematic .preview .display {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 64px; font-weight: 300; font-style: italic;
+    letter-spacing: -0.025em; line-height: 0.92;
+    color: #e6a85c; margin-top: 8px;
+  }
+
+  .card .body { padding: 28px 32px 32px; }
+  .card .num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 14px; color: #9a6f2c; letter-spacing: -0.01em;
+  }
+  .card h2 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400; letter-spacing: -0.02em;
+    font-size: 32px; margin: 8px 0 14px;
+  }
+  .card p {
+    font-size: 14px; line-height: 1.55;
+    color: rgba(27,24,20,0.62); margin: 0 0 24px;
+    max-width: 460px;
+  }
+  .card .feature-list {
+    margin: 0 0 24px;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 6px 16px;
+  }
+  .card .feature-list li {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: rgba(27,24,20,0.6);
+  }
+  .card .row {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 16px; border-top: 1px solid rgba(27,24,20,0.18);
+  }
+  .card .tag {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(27,24,20,0.62);
+  }
+  .card .open {
+    display: inline-flex; align-items: center; gap: 8px;
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    font-weight: 500;
+  }
+  .card .arrow { transition: transform .25s; }
+  .card:hover .arrow { transform: translate(4px, -4px); }
+
+  footer {
+    padding: 32px 56px 56px;
+    border-top: 1px solid rgba(27,24,20,0.18);
+    display: flex; justify-content: space-between; gap: 24px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: rgba(27,24,20,0.62);
+  }
+
+  @media (max-width: 900px) {
+    header.site, .grid, footer, .summary { padding-left: 24px; padding-right: 24px; }
+    .grid { grid-template-columns: 1fr; }
+    header.site { grid-template-columns: 1fr; gap: 16px; }
+    .summary { grid-template-columns: 1fr 1fr; }
+    .card .feature-list { grid-template-columns: 1fr; }
+    footer { flex-direction: column; }
+    .card.editorial .preview .display,
+    .card.cinematic .preview .display-up,
+    .card.cinematic .preview .display { font-size: 40px; }
+    .card .preview { height: 280px; padding: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div>
+    <div class="wordmark">Juanita Harris<span class="dot">.</span></div>
+    <h1>Two directions for <em>Buy Turks &amp; Caicos</em>.</h1>
+    <p class="lede">
+      Two finalist concepts for Juanita Harris's lead-gen landing page. Each builds out a complete journey — hero, atlas, lifestyle journeys, process, broker note, dossier, residency, FAQ, field guide, and discretion pledge — with genuine T&amp;C imagery throughout.
+    </p>
+  </div>
+  <div class="meta">Vol. II · 2026 · Private Caicos</div>
+</header>
+
+<div class="summary">
+  <div class="item"><div class="num">13</div><div class="label">Sections per direction</div></div>
+  <div class="item"><div class="num">6</div><div class="label">Island atlas tiles</div></div>
+  <div class="item"><div class="num">4</div><div class="label">Lifestyle journeys</div></div>
+  <div class="item"><div class="num">3</div><div class="label">Field-guide chapters</div></div>
+</div>
+
+<div class="grid">
+  <a class="card editorial" href="editorial-atelier.html">
+    <div class="preview">
+      <div class="display">
+        The quiet<br />
+        <em>archipelago</em><br />
+        of one's own.
+      </div>
+    </div>
+    <div class="body">
+      <div class="num">№ 01 — Direction One</div>
+      <h2>Editorial Atelier</h2>
+      <p>Magazine-style. Ivory paper, ink black, single brass accent. Restrained, written. For the reader.</p>
+      <ul class="feature-list">
+        <li>· Ivory + brass</li>
+        <li>· Cormorant serif</li>
+        <li>· Pull-quote testimonial</li>
+        <li>· Multi-step drawer</li>
+        <li>· 13 chapters</li>
+        <li>· Field guide</li>
+      </ul>
+      <div class="row">
+        <span class="tag">Ivory · Brass · Serif</span>
+        <span class="open">Open <span class="arrow">↗</span></span>
+      </div>
+    </div>
+  </a>
+
+  <a class="card cinematic" href="cinematic-atlantic.html">
+    <div class="preview">
+      <div class="display-up">Buy the</div>
+      <div class="display">quiet shore.</div>
+    </div>
+    <div class="body">
+      <div class="num">№ 03 — Direction Three</div>
+      <h2>Cinematic Atlantic</h2>
+      <p>Deep ocean ink + sun-bleached cream. Full-bleed video hero. Oversized type. The most evocative of the three.</p>
+      <ul class="feature-list">
+        <li>· Deep + sun</li>
+        <li>· Italic display</li>
+        <li>· Full-bleed video</li>
+        <li>· Multi-step drawer</li>
+        <li>· 13 chapters</li>
+        <li>· T&amp;C drone footage</li>
+      </ul>
+      <div class="row">
+        <span class="tag">Deep · Sun · Italic</span>
+        <span class="open">Open <span class="arrow">↗</span></span>
+      </div>
+    </div>
+  </a>
+</div>
+
+<footer>
+  <span>Concepts 01 + 03 · Implemented for review</span>
+  <span>Direction Two omitted by request</span>
+</footer>
+
+</body>
+</html>

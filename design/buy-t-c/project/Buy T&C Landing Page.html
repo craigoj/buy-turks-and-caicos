@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Juanita Harris — Buy Turks &amp; Caicos</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&family=DM+Serif+Display&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles/shared.css" />
+
+<style>
+  html, body { margin: 0; padding: 0; background: #f0eee9; }
+  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif; }
+  /* Notes pinned at top of canvas (from designer to user) */
+  .design-note {
+    background: #fef4a8;
+    color: #5a4a2a;
+    padding: 14px 18px;
+    font-size: 13px;
+    line-height: 1.5;
+    max-width: 520px;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    font-family: -apple-system, system-ui, sans-serif;
+  }
+  .design-note b { color: #3a2e10; }
+</style>
+
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<div id="root"></div>
+
+<script type="text/babel" src="design-canvas.jsx"></script>
+<script type="text/babel" src="tweaks-panel.jsx"></script>
+<script type="text/babel" src="directions/d1-editorial.jsx"></script>
+<script type="text/babel" src="directions/d2-quiet.jsx"></script>
+<script type="text/babel" src="directions/d3-cinematic.jsx"></script>
+
+<script type="text/babel">
+
+const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  "focusDirection": "d1",
+  "palette": [
+    "#0e1f2a",
+    "#f5efe1",
+    "#e6a85c"
+  ],
+  "typePair": "tiempos-inter",
+  "heroLayout": "split",
+  "ctaCopy": "Schedule a private consultation",
+  "ctaStyle": "pill",
+  "showTaxBlock": true
+}/*EDITMODE-END*/;
+
+const PALETTES = {
+  ivory:    { ink: '#1b1814', paper: '#f4f0e6', accent: '#9a6f2c', label: 'Ivory & Brass' },
+  bone:     { ink: '#2a2620', paper: '#faf7f1', accent: '#5c7a6e', label: 'Bone & Reef' },
+  ocean:    { ink: '#0e1f2a', paper: '#f5efe1', accent: '#e6a85c', label: 'Atlantic & Sun' },
+  sand:     { ink: '#3a2e1f', paper: '#efe4cf', accent: '#a64d2c', label: 'Sand & Coral' },
+};
+
+const TYPE_PAIRS = {
+  'tiempos-inter':  { display: 'Cormorant Garamond', body: 'Inter',   label: 'Cormorant + Inter' },
+  'fraunces-inter': { display: 'Fraunces',           body: 'Inter',   label: 'Fraunces + Inter' },
+  'dm-manrope':     { display: 'DM Serif Display',   body: 'Manrope', label: 'DM Serif + Manrope' },
+  'inter-only':     { display: 'Inter',              body: 'Inter',   label: 'Inter only' },
+};
+
+const App = () => {
+  const [tw, setTweak] = window.useTweaks(TWEAK_DEFAULTS);
+
+  // Apply tweak overrides via CSS vars on the focused artboard
+  React.useEffect(() => {
+    const focused = document.querySelector(`[data-tweak-target="${tw.focusDirection}"]`);
+    if (!focused) return;
+    const p = PALETTES[tw.palette] || PALETTES.ivory;
+    const ty = TYPE_PAIRS[tw.typePair] || TYPE_PAIRS['tiempos-inter'];
+    focused.style.setProperty('--tw-ink', p.ink);
+    focused.style.setProperty('--tw-paper', p.paper);
+    focused.style.setProperty('--tw-accent', p.accent);
+    focused.style.setProperty('--tw-display', `"${ty.display}"`);
+    focused.style.setProperty('--tw-body', `"${ty.body}"`);
+  }, [tw.focusDirection, tw.palette, tw.typePair]);
+
+  return (
+    <>
+      <window.DesignCanvas>
+        <div className="design-note" style={{ marginBottom: 24 }}>
+          <b>Buy Turks &amp; Caicos · Juanita Harris</b><br/>
+          Three world-class lead-gen directions, side by side. All scroll-static, full layouts. Click any artboard's expand icon to focus.
+          <br/><br/>
+          <b>Direction 1 · Editorial Atelier</b> — magazine, ivory, serif display, gridded specimens.<br/>
+          <b>Direction 2 · Quiet Coastal</b> — minimal, sand &amp; bone, sans-only, generous whitespace.<br/>
+          <b>Direction 3 · Cinematic Atlantic</b> — full-bleed dusk hero, deep ocean ink, oversized type.
+          <br/><br/>
+          Toggle <b>Tweaks</b> in the toolbar to swap palette, type, hero layout, and CTA copy on the focused direction.
+        </div>
+
+        <window.DCSection id="landing-pages" title="Landing pages" subtitle="Three directions · 1280 × ~5400">
+          <window.DCArtboard id="d1" label="01 · Editorial Atelier" width={1280} height={5400}>
+            <div data-tweak-target="d1" style={{ width: '100%' }}>
+              <window.D1 />
+            </div>
+          </window.DCArtboard>
+          <window.DCArtboard id="d2" label="02 · Quiet Coastal" width={1280} height={5800}>
+            <div data-tweak-target="d2" style={{ width: '100%' }}>
+              <window.D2 />
+            </div>
+          </window.DCArtboard>
+          <window.DCArtboard id="d3" label="03 · Cinematic Atlantic" width={1280} height={5800}>
+            <div data-tweak-target="d3" style={{ width: '100%' }}>
+              <window.D3 />
+            </div>
+          </window.DCArtboard>
+        </window.DCSection>
+      </window.DesignCanvas>
+
+      <window.TweaksPanel title="Tweaks">
+        <window.TweakSection title="Focus">
+          <window.TweakRadio
+            label="Direction"
+            value={tw.focusDirection}
+            onChange={v => setTweak('focusDirection', v)}
+            options={[
+              { value: 'd1', label: 'D1' },
+              { value: 'd2', label: 'D2' },
+              { value: 'd3', label: 'D3' },
+            ]}
+          />
+          <p style={{ fontSize: 11, color: '#888', margin: '6px 0 0' }}>Tweaks apply to the focused direction's CSS variables.</p>
+        </window.TweakSection>
+
+        <window.TweakSection title="Palette">
+          <window.TweakColor
+            label="Curated palettes"
+            value={tw.palette}
+            onChange={v => setTweak('palette', v)}
+            options={[
+              [PALETTES.ivory.paper, PALETTES.ivory.ink, PALETTES.ivory.accent],
+              [PALETTES.bone.paper,  PALETTES.bone.ink,  PALETTES.bone.accent],
+              [PALETTES.ocean.ink,   PALETTES.ocean.paper, PALETTES.ocean.accent],
+              [PALETTES.sand.paper,  PALETTES.sand.ink,  PALETTES.sand.accent],
+            ]}
+          />
+          <window.TweakSelect
+            label="Named palette"
+            value={tw.palette}
+            onChange={v => setTweak('palette', v)}
+            options={Object.entries(PALETTES).map(([k, p]) => ({ value: k, label: p.label }))}
+          />
+        </window.TweakSection>
+
+        <window.TweakSection title="Typography">
+          <window.TweakSelect
+            label="Type pairing"
+            value={tw.typePair}
+            onChange={v => setTweak('typePair', v)}
+            options={Object.entries(TYPE_PAIRS).map(([k, p]) => ({ value: k, label: p.label }))}
+          />
+        </window.TweakSection>
+
+        <window.TweakSection title="Hero">
+          <window.TweakRadio
+            label="Layout"
+            value={tw.heroLayout}
+            onChange={v => setTweak('heroLayout', v)}
+            options={[
+              { value: 'split',     label: 'Split' },
+              { value: 'centered',  label: 'Centered' },
+              { value: 'fullbleed', label: 'Full' },
+            ]}
+          />
+        </window.TweakSection>
+
+        <window.TweakSection title="CTA">
+          <window.TweakText
+            label="Button copy"
+            value={tw.ctaCopy}
+            onChange={v => setTweak('ctaCopy', v)}
+            placeholder="Schedule a private consultation"
+          />
+          <window.TweakRadio
+            label="Style"
+            value={tw.ctaStyle}
+            onChange={v => setTweak('ctaStyle', v)}
+            options={[
+              { value: 'solid',   label: 'Solid' },
+              { value: 'outline', label: 'Outline' },
+              { value: 'pill',    label: 'Pill' },
+            ]}
+          />
+        </window.TweakSection>
+
+        <window.TweakSection title="Sections">
+          <window.TweakToggle
+            label="Show tax & residency"
+            value={tw.showTaxBlock}
+            onChange={v => setTweak('showTaxBlock', v)}
+          />
+        </window.TweakSection>
+      </window.TweaksPanel>
+
+      {/* CTA copy + style live overrides via CSS-targeted MutationObserver-free approach */}
+      <CtaApplier tw={tw} />
+    </>
+  );
+};
+
+// Walks the focused artboard and rewrites all .btn copy + style class.
+const CtaApplier = ({ tw }) => {
+  React.useEffect(() => {
+    const root = document.querySelector(`[data-tweak-target="${tw.focusDirection}"]`);
+    if (!root) return;
+    const btns = root.querySelectorAll('.btn:not(.btn-ghost)');
+    btns.forEach(b => {
+      // Find the text node and swap. Preserve any trailing arrow span.
+      const arrow = b.querySelector('.arrow');
+      const arrowHtml = arrow ? arrow.outerHTML : '';
+      // Heuristic: only swap if button looks like a primary CTA (has "consult" or "Schedule" or "Begin" in it).
+      const cur = b.textContent.trim().toLowerCase();
+      if (cur.includes('schedule') || cur.includes('consult') || cur.includes('begin') || cur.includes('introduction') || cur.includes('private call')) {
+        b.innerHTML = `${tw.ctaCopy} ${arrowHtml}`;
+      }
+      // Style: pill = rounded full
+      b.style.borderRadius = tw.ctaStyle === 'pill' ? '999px' : (tw.ctaStyle === 'outline' ? '0' : '');
+      if (tw.ctaStyle === 'outline') {
+        b.style.background = 'transparent';
+        b.style.color = 'currentColor';
+        b.style.border = '1px solid currentColor';
+      } else {
+        b.style.background = '';
+        b.style.color = '';
+        b.style.border = '';
+      }
+    });
+
+    // Hide tax block?
+    const direction = root.querySelector('.lp');
+    if (direction) {
+      const sections = direction.querySelectorAll('section');
+      sections.forEach(s => {
+        const txt = s.textContent.toLowerCase();
+        const isTax = txt.includes('residency') && txt.includes('tax') && txt.includes('jurisdiction');
+        if (isTax) s.style.display = tw.showTaxBlock ? '' : 'none';
+      });
+    }
+  }, [tw.focusDirection, tw.ctaCopy, tw.ctaStyle, tw.showTaxBlock]);
+  return null;
+};
+
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script>
+
+</body>
+</html>

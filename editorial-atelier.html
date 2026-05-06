@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Juanita Harris — Private Caicos · Buy Turks &amp; Caicos</title>
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<meta name="description" content="A private brokerage for those acquiring residence on Providenciales, Parrot Cay, and the lesser-known shores of Turks &amp; Caicos. By introduction, by appointment, by the sea." />
+<meta name="theme-color" content="#1b1814" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Juanita Harris — Buy Turks &amp; Caicos" />
+<meta property="og:description" content="Private brokerage. Providenciales, Parrot Cay, and the lesser-known shores. By introduction." />
+<meta property="og:image" content="assets/og-image.svg" />
+<meta property="og:locale" content="en_US" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Juanita Harris — Buy Turks &amp; Caicos" />
+<meta name="twitter:description" content="Private brokerage. By introduction, by appointment, by the sea." />
+<meta name="twitter:image" content="assets/og-image.svg" />
+
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/favicon.svg" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link rel="preconnect" href="https://images.unsplash.com" />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400;1,500&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="styles/shared.css" />
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "RealEstateAgent",
+  "name": "Juanita Harris — Private Caicos",
+  "description": "Private real estate brokerage specializing in Turks & Caicos properties.",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Suite 4, Regent Village",
+    "addressLocality": "Providenciales",
+    "addressCountry": "TC"
+  },
+  "telephone": "+1-649-555-0142",
+  "areaServed": ["Providenciales", "Grace Bay", "Long Bay", "Leeward", "Parrot Cay", "Pine Cay", "North Caicos"],
+  "knowsLanguage": ["English", "Spanish"]
+}
+</script>
+
+<style>
+  :root {
+    --ink: #1b1814;
+    --paper: #f4f0e6;
+    --paper-2: #ece6d6;
+    --rule: rgba(27,24,20,0.18);
+    --muted: rgba(27,24,20,0.62);
+    --brass: #9a6f2c;
+    --ph-bg: #e7e0cf;
+    --ph-a: rgba(27,24,20,0.05);
+    --ph-b: rgba(27,24,20,0.09);
+    --ph-fg: rgba(27,24,20,0.7);
+    --ph-tag: rgba(244,240,230,0.85);
+  }
+  html, body { background: var(--paper); color: var(--ink); }
+  body { font-family: "Inter", system-ui, sans-serif; }
+
+  .display {
+    font-family: "Cormorant Garamond", "Times New Roman", serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+  .eyebrow {
+    font-family: "JetBrains Mono", ui-monospace, monospace;
+    font-size: 11px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+  .num {
+    font-family: "Cormorant Garamond", serif;
+    font-feature-settings: "lnum", "tnum";
+  }
+
+  .btn {
+    display: inline-flex; align-items: center; gap: 10px;
+    padding: 14px 22px;
+    background: var(--ink); color: var(--paper);
+    font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase;
+    border: none;
+    transition: background .25s;
+  }
+  .btn:hover { background: var(--brass); }
+  .btn-ghost {
+    background: transparent; color: var(--ink);
+    border: 1px solid var(--ink);
+  }
+  .btn-ghost:hover { background: var(--ink); color: var(--paper); }
+  .arrow { display: inline-block; transition: transform .25s; }
+  .lift:hover .arrow { transform: translate(4px, -4px); }
+
+  /* ----- Nav ----- */
+  nav.site {
+    display: flex; align-items: center; justify-content: space-between;
+    padding: 24px 56px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .wordmark {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px; letter-spacing: -0.01em;
+  }
+  .wordmark .dot { color: var(--brass); }
+  .nav-links { display: flex; gap: 36px; font-size: 13px; color: var(--muted); }
+  .nav-links a:hover { color: var(--ink); }
+
+  /* ----- Hero ----- */
+  .hero { padding: 56px; border-bottom: 1px solid var(--rule); }
+  .hero-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 48px; }
+  .hero h1 { font-size: clamp(72px, 9vw, 132px); margin: 0; }
+  .hero h1 em { font-style: italic; color: var(--brass); }
+  .hero .lede {
+    margin-top: 36px;
+    font-size: 17px; line-height: 1.55;
+    max-width: 520px;
+    color: var(--muted);
+  }
+  .hero .ctas { display: flex; gap: 14px; margin-top: 40px; flex-wrap: wrap; }
+  .hero .stats {
+    display: flex; gap: 56px;
+    margin-top: 56px; padding-top: 28px;
+    border-top: 1px solid var(--rule);
+    flex-wrap: wrap;
+  }
+  .hero .stats .num { font-size: 38px; line-height: 1; }
+  .hero .stats .eyebrow { margin-top: 8px; }
+
+  .hero-form {
+    background: var(--paper-2);
+    padding: 36px;
+    align-self: start;
+  }
+  .hero-form h3 { font-size: 32px; margin: 14px 0 8px; }
+  .hero-form p { font-size: 14px; color: var(--muted); margin: 0 0 28px; }
+  .hero-form .grid { display: grid; gap: 22px; }
+  .hero-form .btn { width: 100%; margin-top: 28px; justify-content: center; }
+  .hero-form .footnote { margin-top: 18px; text-align: center; font-size: 10px; }
+
+  /* ----- Marquee ----- */
+  .marquee {
+    border-bottom: 1px solid var(--rule);
+    overflow: hidden;
+    padding: 22px 0;
+  }
+  .marquee-track {
+    display: flex; gap: 64px;
+    white-space: nowrap;
+    font-family: "Cormorant Garamond", serif;
+    font-size: 22px; font-style: italic;
+    color: var(--muted);
+    animation: marquee 38s linear infinite;
+    width: max-content;
+    padding-left: 64px;
+  }
+  .marquee-track em { font-style: normal; }
+  @keyframes marquee {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+
+  /* ----- Section header (eyebrow + heading split) ----- */
+  .section { padding: 96px 56px; border-bottom: 1px solid var(--rule); }
+  .section.alt { background: var(--paper-2); }
+  .section-head {
+    display: grid; grid-template-columns: 1fr 2fr; gap: 64px;
+    margin-bottom: 56px;
+  }
+  .section-head h2 { font-size: clamp(40px, 5vw, 64px); margin: 0; }
+  .section-head h2 em { font-style: italic; color: var(--brass); }
+
+  /* ----- Why grid ----- */
+  .why-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid var(--rule);
+  }
+  .why-cell {
+    padding: 36px 24px 36px 0;
+    border-right: 1px solid var(--rule);
+  }
+  .why-cell:last-child { border-right: none; }
+  .why-cell .num { font-size: 28px; color: var(--brass); }
+  .why-cell h3 { font-size: 26px; margin: 32px 0 14px; }
+  .why-cell p { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 0; }
+
+  /* ----- Areas grid ----- */
+  .areas-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    border-top: 1px solid var(--rule);
+    border-left: 1px solid var(--rule);
+  }
+  .area-card {
+    border-right: 1px solid var(--rule);
+    border-bottom: 1px solid var(--rule);
+    cursor: pointer;
+    background: var(--paper);
+  }
+  .area-card .ph { height: 220px; }
+  .area-body { padding: 24px 28px 32px; }
+  .area-body .row { display: flex; justify-content: space-between; align-items: baseline; }
+  .area-body h3 { font-size: 32px; margin: 0; }
+  .area-body .no { font-size: 13px; color: var(--brass); }
+  .area-body p { font-size: 14px; line-height: 1.55; color: var(--muted); margin: 12px 0 20px; }
+  .area-body .range {
+    display: flex; justify-content: space-between; align-items: center;
+    padding-top: 14px; border-top: 1px solid var(--rule);
+  }
+  .area-body .range .num { font-size: 15px; }
+
+  /* ----- Process ----- */
+  .process-row {
+    display: grid; grid-template-columns: 120px 1.3fr 2fr;
+    gap: 32px;
+    padding: 28px 0;
+    border-top: 1px solid var(--rule);
+  }
+  .process-row:last-child { border-bottom: 1px solid var(--rule); }
+  .process-row .num { font-size: 44px; color: var(--brass); line-height: 1; }
+  .process-row h3 { font-size: 30px; margin: 0; }
+  .process-row p { font-size: 15px; line-height: 1.55; color: var(--muted); margin: 0; max-width: 560px; }
+
+  /* ----- Investment ----- */
+  .investment-grid {
+    display: grid; grid-template-columns: 1.1fr 1fr;
+    gap: 64px; align-items: start;
+  }
+  .investment-grid h2 { font-size: clamp(40px, 5vw, 64px); margin: 24px 0 28px; }
+  .investment-grid .lede {
+    font-size: 17px; line-height: 1.6; color: var(--muted);
+    max-width: 480px;
+  }
+  .investment-chart { height: 280px; margin-top: 36px; }
+  .investment-table { border-top: 1px solid var(--rule); }
+  .investment-row {
+    display: grid; grid-template-columns: 1fr auto;
+    gap: 24px;
+    padding: 32px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: baseline;
+  }
+  .investment-row .label { font-size: 14px; color: var(--muted); max-width: 240px; }
+  .investment-row .value .num { font-size: 56px; line-height: 1; }
+  .investment-row .value { text-align: right; }
+  .investment-row .value .eyebrow { margin-top: 6px; }
+
+  /* ----- Tax (dark) ----- */
+  .tax {
+    padding: 96px 56px; border-bottom: 1px solid var(--rule);
+    background: #1b1814; color: var(--paper);
+  }
+  .tax .eyebrow { color: rgba(244,240,230,0.6); }
+  .tax h2 { font-size: clamp(40px, 5vw, 64px); margin: 0; }
+  .tax-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    border-top: 1px solid rgba(244,240,230,0.18);
+  }
+  .tax-cell {
+    padding: 40px 28px 0 0;
+    border-right: 1px solid rgba(244,240,230,0.18);
+  }
+  .tax-cell:last-child { border-right: none; }
+  .tax-cell .num { font-size: 76px; color: #d4a45a; line-height: 1; }
+  .tax-cell .label { font-size: 15px; margin-top: 18px; color: rgba(244,240,230,0.75); }
+  .tax-fine {
+    margin-top: 48px; font-size: 14px;
+    color: rgba(244,240,230,0.55); max-width: 720px;
+  }
+
+  /* ----- FAQ ----- */
+  .faq-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 64px; }
+  .faq-grid h2 { font-size: clamp(36px, 4.5vw, 56px); margin: 24px 0; }
+  details {
+    border-top: 1px solid var(--rule);
+    padding: 24px 0;
+  }
+  details summary {
+    display: flex; justify-content: space-between; align-items: center;
+    cursor: pointer; list-style: none;
+  }
+  details summary::-webkit-details-marker { display: none; }
+  details summary .q { font-size: 22px; }
+  details summary .plus { color: var(--brass); font-size: 22px; transition: transform .25s; }
+  details[open] summary .plus { transform: rotate(45deg); }
+  details p { font-size: 15px; line-height: 1.6; color: var(--muted); margin: 16px 0 0; max-width: 580px; }
+
+  /* ----- Final CTA ----- */
+  .final {
+    padding: 120px 56px;
+    text-align: center;
+    border-bottom: 1px solid var(--rule);
+  }
+  .final h2 {
+    font-size: clamp(64px, 9vw, 120px);
+    margin: 24px auto 36px;
+    max-width: 1000px; line-height: 1;
+  }
+  .final h2 em { font-style: italic; color: var(--brass); }
+  .final p {
+    font-size: 17px; color: var(--muted);
+    max-width: 540px; margin: 0 auto 40px;
+    line-height: 1.55;
+  }
+
+  /* ----- Header sticky state ----- */
+  nav.site {
+    position: sticky; top: 0;
+    z-index: 50;
+    background: var(--paper);
+    transition: background .3s, box-shadow .3s, padding .3s, border-color .3s;
+  }
+  nav.site.is-scrolled {
+    box-shadow: 0 1px 0 var(--rule), 0 6px 22px -18px rgba(27,24,20,0.35);
+    padding-top: 16px; padding-bottom: 16px;
+  }
+  .nav-cta {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 16px;
+    border: 1px solid var(--ink);
+    background: transparent; color: var(--ink);
+    font-size: 11px; letter-spacing: 0.16em; text-transform: uppercase;
+    cursor: pointer;
+    transition: background .25s, color .25s;
+  }
+  .nav-cta:hover { background: var(--ink); color: var(--paper); }
+
+  /* ----- Trust strip ----- */
+  .trust-strip {
+    padding: 24px 56px;
+    border-bottom: 1px solid var(--rule);
+    display: flex; justify-content: space-between; align-items: center;
+    gap: 32px; flex-wrap: wrap;
+    background: var(--paper);
+  }
+  .trust-strip .pill {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted);
+  }
+  .trust-strip .pill .num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 18px; letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+
+  /* ----- Journeys ----- */
+  .journeys-grid {
+    display: grid; grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .journey-card {
+    cursor: pointer;
+  }
+  .journey-card .ph { height: 280px; margin-bottom: 20px; }
+  .journey-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400; letter-spacing: -0.02em;
+    font-size: 28px; margin: 0 0 8px;
+  }
+  .journey-card p {
+    font-size: 14px; line-height: 1.55;
+    color: var(--muted); margin: 0;
+  }
+
+  /* ----- Meet Juanita ----- */
+  .meet {
+    padding: 96px 56px;
+    border-bottom: 1px solid var(--rule);
+    display: grid; grid-template-columns: 1fr 1.4fr; gap: 64px;
+    align-items: start;
+  }
+  .meet-portrait {
+    aspect-ratio: 4 / 5;
+    background: var(--paper-2);
+    position: relative;
+    overflow: hidden;
+  }
+  .meet-portrait img { width: 100%; height: 100%; object-fit: cover; }
+  .meet-portrait .caption {
+    position: absolute; left: 14px; bottom: 14px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--paper);
+    background: rgba(27,24,20,0.65);
+    padding: 8px 12px;
+    backdrop-filter: blur(2px);
+  }
+  .meet h2 {
+    font-size: clamp(40px, 5vw, 64px);
+    margin: 24px 0 28px;
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400; letter-spacing: -0.02em;
+  }
+  .meet h2 em { font-style: italic; color: var(--brass); }
+  .meet p {
+    font-size: 16px; line-height: 1.7;
+    color: var(--muted);
+    margin: 0 0 16px;
+    max-width: 580px;
+  }
+  .meet-signature {
+    margin-top: 24px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: 28px;
+    letter-spacing: -0.01em;
+  }
+  .meet-credentials {
+    margin-top: 48px;
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
+  }
+  .meet-credentials .item .num {
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px; line-height: 1;
+    color: var(--brass);
+  }
+  .meet-credentials .item .label {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted);
+    margin-top: 8px;
+  }
+  .meet-contact {
+    margin-top: 32px;
+    display: flex; gap: 14px; flex-wrap: wrap;
+  }
+  .meet-contact a {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 12px 18px;
+    border: 1px solid var(--rule);
+    background: transparent;
+    font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase;
+    color: var(--ink);
+    transition: background .25s, color .25s;
+  }
+  .meet-contact a:hover { background: var(--ink); color: var(--paper); }
+
+  /* ----- Wealth Report ----- */
+  .wealth {
+    padding: 96px 56px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--paper-2);
+    display: grid; grid-template-columns: 1fr 1fr; gap: 64px;
+    align-items: center;
+  }
+  .wealth-cover {
+    aspect-ratio: 3 / 4;
+    background: var(--ink);
+    color: var(--paper);
+    padding: 36px;
+    position: relative;
+    display: flex; flex-direction: column; justify-content: space-between;
+    box-shadow:
+      -1px 0 0 rgba(27,24,20,0.18),
+      0 24px 60px -28px rgba(27,24,20,0.45);
+    transform: rotate(-1deg);
+    transition: transform .4s cubic-bezier(.2,.7,.2,1);
+  }
+  .wealth-cover:hover { transform: rotate(0deg) translateY(-4px); }
+  .wealth-cover .eyebrow { color: rgba(244,240,230,0.5); }
+  .wealth-cover h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400; letter-spacing: -0.02em;
+    font-size: 56px; margin: 24px 0 0;
+    line-height: 0.95;
+  }
+  .wealth-cover h3 em { font-style: italic; color: var(--brass); }
+  .wealth-cover .meta {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: rgba(244,240,230,0.55);
+  }
+  .wealth-info h2 {
+    font-size: clamp(40px, 5vw, 56px);
+    margin: 24px 0 24px;
+  }
+  .wealth-info p {
+    font-size: 16px; line-height: 1.6;
+    color: var(--muted);
+    margin: 0 0 24px;
+    max-width: 520px;
+  }
+  .wealth-info ul {
+    list-style: none; padding: 0; margin: 0 0 32px;
+  }
+  .wealth-info li {
+    padding: 14px 0;
+    border-top: 1px solid var(--rule);
+    font-size: 15px;
+    display: flex; gap: 16px; align-items: baseline;
+  }
+  .wealth-info li:last-child { border-bottom: 1px solid var(--rule); }
+  .wealth-info li .num {
+    color: var(--brass); font-size: 14px;
+    min-width: 32px;
+  }
+
+  /* ----- Field Guide / Journal ----- */
+  .field-guide {
+    padding: 96px 56px;
+    border-bottom: 1px solid var(--rule);
+  }
+  .journal-grid {
+    display: grid; grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+  .journal-card { cursor: pointer; }
+  .journal-card .ph { height: 320px; margin-bottom: 24px; }
+  .journal-card .meta {
+    display: flex; justify-content: space-between;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 12px;
+  }
+  .journal-card h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400; letter-spacing: -0.02em;
+    font-size: 30px; margin: 0 0 12px;
+    line-height: 1.05;
+  }
+  .journal-card p {
+    font-size: 15px; line-height: 1.55;
+    color: var(--muted); margin: 0 0 16px;
+  }
+  .journal-card .read {
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--brass);
+  }
+  .journal-card .arrow { display: inline-block; transition: transform .25s; }
+  .journal-card:hover .arrow { transform: translate(4px, -4px); }
+
+  /* ----- Pull quote ----- */
+  .pull-quote {
+    padding: 120px 56px;
+    border-bottom: 1px solid var(--rule);
+    text-align: center;
+    background: var(--paper-2);
+  }
+  .pull-quote blockquote {
+    margin: 0 auto;
+    max-width: 920px;
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-size: clamp(32px, 4vw, 56px);
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .pull-quote blockquote::before { content: "\201C"; color: var(--brass); margin-right: 8px; }
+  .pull-quote blockquote::after { content: "\201D"; color: var(--brass); margin-left: 8px; }
+  .pull-quote cite {
+    margin-top: 32px;
+    display: block;
+    font-style: normal;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.22em; text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  /* ----- Discretion ----- */
+  .discretion {
+    padding: 80px 56px;
+    border-bottom: 1px solid var(--rule);
+    display: grid; grid-template-columns: 1fr 2fr; gap: 64px; align-items: start;
+  }
+  .discretion .eyebrow { font-size: 11px; }
+  .discretion h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-weight: 400; letter-spacing: -0.02em;
+    font-size: 36px;
+    margin: 0 0 16px;
+  }
+  .discretion p {
+    font-size: 16px; line-height: 1.7;
+    color: var(--muted);
+    margin: 0; max-width: 640px;
+  }
+
+  /* ----- Footer ----- */
+  footer.site {
+    padding: 56px 56px 64px;
+    display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 48px;
+  }
+  footer.site .credentials {
+    margin-top: 32px;
+    padding-top: 28px;
+    border-top: 1px solid var(--rule);
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase;
+    color: var(--muted);
+    grid-column: 1 / -1;
+  }
+  footer.site .brand { font-family: "Cormorant Garamond", serif; font-size: 28px; }
+  footer.site .brand .dot { color: var(--brass); }
+  footer.site p { font-size: 13px; color: var(--muted); margin-top: 16px; max-width: 280px; line-height: 1.55; }
+  footer.site .col-head { margin-bottom: 14px; }
+  footer.site .item { font-size: 13px; color: var(--muted); margin-bottom: 6px; }
+
+  /* ----- Responsive ----- */
+  @media (max-width: 1024px) {
+    .hero-grid, .investment-grid, .faq-grid, .section-head, .meet, .wealth, .discretion {
+      grid-template-columns: 1fr; gap: 32px;
+    }
+    .why-grid, .tax-grid { grid-template-columns: repeat(2, 1fr); }
+    .why-cell:nth-child(2n) { border-right: none; }
+    .tax-cell:nth-child(2n) { border-right: none; }
+    .areas-grid, .journeys-grid, .journal-grid { grid-template-columns: repeat(2, 1fr); }
+    footer.site { grid-template-columns: 1fr 1fr; }
+    .process-row { grid-template-columns: 80px 1fr; }
+    .process-row p { grid-column: 1 / -1; }
+    .meet-credentials { grid-template-columns: repeat(3, 1fr); }
+    .nav-links { display: none; }
+    .hamburger { display: inline-flex; }
+  }
+  @media (max-width: 640px) {
+    nav.site { padding: 20px 24px; }
+    nav.site .eyebrow { display: none; }
+    .hero, .section, .tax, .final, .meet, .wealth, .field-guide, .pull-quote, .discretion, .trust-strip {
+      padding-left: 24px; padding-right: 24px;
+    }
+    .hero { padding-top: 40px; padding-bottom: 40px; }
+    .section, .meet, .wealth, .field-guide { padding-top: 64px; padding-bottom: 64px; }
+    .why-grid, .tax-grid, .areas-grid, .journeys-grid, .journal-grid { grid-template-columns: 1fr; }
+    .why-cell, .tax-cell { border-right: none; }
+    footer.site { grid-template-columns: 1fr; padding: 40px 24px; }
+    .hero .stats { gap: 32px; }
+    .trust-strip { gap: 16px; }
+    .pull-quote { padding-top: 80px; padding-bottom: 80px; }
+    .meet-credentials { grid-template-columns: 1fr 1fr; }
+  }
+</style>
+</head>
+<body class="lp">
+
+<a class="skip-link" href="#main">Skip to main content</a>
+
+<nav class="site" data-header>
+  <div class="wordmark">Juanita Harris<span class="dot">.</span></div>
+  <div class="nav-links">
+    <a href="#islands">Islands</a>
+    <a href="#process">Process</a>
+    <a href="#meet">Juanita</a>
+    <a href="#journal">Journal</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <button class="nav-cta" data-drawer-open type="button">Private inquiry <span aria-hidden="true">↗</span></button>
+  <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<div class="mobile-menu" data-mobile-menu aria-hidden="true">
+  <a href="#islands">Islands</a>
+  <a href="#process">Process</a>
+  <a href="#meet">Juanita</a>
+  <a href="#journal">Journal</a>
+  <a href="#contact">Begin a conversation</a>
+  <div class="menu-foot">
+    Providenciales · TCI<br/>+1 (649) 555 0142
+  </div>
+</div>
+
+<main id="main">
+
+<section class="hero" id="contact">
+  <div class="hero-grid">
+    <div>
+      <div class="eyebrow" style="margin-bottom: 28px;">Vol. I — Private Caicos · Est. MMXII</div>
+      <h1 class="display">
+        The quiet<br />
+        <em>archipelago</em><br />
+        of one's own.
+      </h1>
+      <p class="lede">
+        A private brokerage for those acquiring residence on Providenciales, Parrot Cay, and the lesser-known shores of Turks &amp; Caicos. By introduction, by appointment, by the sea.
+      </p>
+      <div class="ctas">
+        <button class="btn lift">Schedule a private consultation <span class="arrow">↗</span></button>
+        <button class="btn btn-ghost">View the portfolio</button>
+      </div>
+      <div class="stats">
+        <div>
+          <div class="num">$1.2B</div>
+          <div class="eyebrow">In closed transactions</div>
+        </div>
+        <div>
+          <div class="num">142</div>
+          <div class="eyebrow">Private acquisitions</div>
+        </div>
+        <div>
+          <div class="num">11 yrs</div>
+          <div class="eyebrow">On the islands</div>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-form">
+      <div class="eyebrow">A. 01 — The Introduction</div>
+      <h3 class="display">Begin a conversation.</h3>
+      <p>Tell us a little about what you are seeking. We respond personally within one business day.</p>
+      <form class="grid" data-inline-form>
+        <div class="field"><label for="f-name">First name</label><input id="f-name" placeholder="Eleanor" /></div>
+        <div class="field"><label for="f-email">Email</label><input id="f-email" type="email" placeholder="eleanor@example.com" /></div>
+        <div class="field">
+          <label for="f-budget">Budget</label>
+          <select id="f-budget">
+            <option>$3M – $7M</option>
+            <option>$7M – $15M</option>
+            <option>$15M+</option>
+          </select>
+        </div>
+        <div class="field"><label for="f-notes">Notes</label><input id="f-notes" placeholder="Beachfront, sleeps 12, by Christmas." /></div>
+        <button type="submit" class="btn lift">Request introduction <span class="arrow">↗</span></button>
+      </form>
+      <p class="footnote eyebrow">By appointment · No obligation</p>
+    </aside>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span>As featured in <em>Mansion Global</em></span><span>·</span>
+    <span><em>Robb Report</em></span><span>·</span>
+    <span><em>The Wall Street Journal</em></span><span>·</span>
+    <span><em>Architectural Digest</em></span><span>·</span>
+    <span><em>Condé Nast Traveler</em></span><span>·</span>
+    <span>As featured in <em>Mansion Global</em></span><span>·</span>
+    <span><em>Robb Report</em></span><span>·</span>
+    <span><em>The Wall Street Journal</em></span><span>·</span>
+    <span><em>Architectural Digest</em></span><span>·</span>
+    <span><em>Condé Nast Traveler</em></span><span>·</span>
+  </div>
+</div>
+
+<div class="trust-strip" data-reveal>
+  <span class="pill"><span class="num">$420M+</span> in closed transactions</span>
+  <span class="pill"><span class="num">17 yrs</span> on island</span>
+  <span class="pill"><span class="num">142</span> private acquisitions</span>
+  <span class="pill">Member · Christie's International Real Estate Network</span>
+</div>
+
+<section class="section">
+  <div class="section-head">
+    <div class="eyebrow">§ 02 — The Case for the Islands</div>
+    <h2 class="display">Four reasons the quietly wealthy<br />have come here for thirty years.</h2>
+  </div>
+  <div class="why-grid">
+    <div class="why-cell">
+      <div class="num">I.</div>
+      <h3 class="display">No income tax</h3>
+      <p>No personal income tax. No capital gains. No inheritance. The ledger stays where it began.</p>
+    </div>
+    <div class="why-cell">
+      <div class="num">II.</div>
+      <h3 class="display">British Overseas Territory</h3>
+      <p>English common law, USD currency, direct flights from twelve gateways. A passport that travels well.</p>
+    </div>
+    <div class="why-cell">
+      <div class="num">III.</div>
+      <h3 class="display">The reef</h3>
+      <p>Sixty-five miles of barrier reef. Water like cut glass. Twelve uninhabited cays, by tender.</p>
+    </div>
+    <div class="why-cell">
+      <div class="num">IV.</div>
+      <h3 class="display">Discretion</h3>
+      <p>A small island. A smaller circle. Transactions that close without a press release.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="islands">
+  <div class="section-head">
+    <div class="eyebrow">§ 03 — Atlas of Islands</div>
+    <h2 class="display">Where, exactly, you would prefer to live.</h2>
+  </div>
+  <div class="areas-grid">
+    <article class="area-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1536276214783-1ae17228588a?w=1200&q=80&auto=format&fit=crop" alt="Grace Bay aerial coastline" loading="lazy" />
+        <span class="ph-label">GRACE BAY · AERIAL · 01</span>
+      </div>
+      <div class="area-body">
+        <div class="row"><h3 class="display">Grace Bay</h3><div class="no num">№ 01</div></div>
+        <p>Twelve miles of coral sand. The address that needs no introduction.</p>
+        <div class="range"><span class="eyebrow">Range</span><span class="num">$2.4M – $24M</span></div>
+      </div>
+    </article>
+    <article class="area-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1514130546524-5da6eaa36b72?w=1200&q=80&auto=format&fit=crop" alt="Long Bay aerial shallow flats" loading="lazy" />
+        <span class="ph-label">LONG BAY · AERIAL · 02</span>
+      </div>
+      <div class="area-body">
+        <div class="row"><h3 class="display">Long Bay</h3><div class="no num">№ 02</div></div>
+        <p>Shallow turquoise flats. The kite-set. New construction, contemporary.</p>
+        <div class="range"><span class="eyebrow">Range</span><span class="num">$3.1M – $18M</span></div>
+      </div>
+    </article>
+    <article class="area-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1597675058833-5e3167a9bf5c?w=1200&q=80&auto=format&fit=crop" alt="Boats on the water at Grand Turk" loading="lazy" />
+        <span class="ph-label">LEEWARD · MARINA · 03</span>
+      </div>
+      <div class="area-body">
+        <div class="row"><h3 class="display">Leeward</h3><div class="no num">№ 03</div></div>
+        <p>Marina, megayacht slips, gated. For the family that arrives by tender.</p>
+        <div class="range"><span class="eyebrow">Range</span><span class="num">$4M – $32M</span></div>
+      </div>
+    </article>
+    <article class="area-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1590170649029-01573b1923fe?w=1200&q=80&auto=format&fit=crop" alt="Coastal trees against the Caribbean sea" loading="lazy" />
+        <span class="ph-label">PARROT CAY · PRIVATE · 04</span>
+      </div>
+      <div class="area-body">
+        <div class="row"><h3 class="display">Parrot Cay</h3><div class="no num">№ 04</div></div>
+        <p>The private island. By invitation, by helicopter, by very few.</p>
+        <div class="range"><span class="eyebrow">Range</span><span class="num">$12M – $80M</span></div>
+      </div>
+    </article>
+    <article class="area-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1709843036519-015b6b827478?w=1200&q=80&auto=format&fit=crop" alt="Aerial view of Caicos beach with palms" loading="lazy" />
+        <span class="ph-label">PINE CAY · LAGOON · 05</span>
+      </div>
+      <div class="area-body">
+        <div class="row"><h3 class="display">Pine Cay</h3><div class="no num">№ 05</div></div>
+        <p>No cars, 800 acres, fifty residences. A rumor more than a place.</p>
+        <div class="range"><span class="eyebrow">Range</span><span class="num">$5M – $22M</span></div>
+      </div>
+    </article>
+    <article class="area-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1564763623496-579a9824ca25?w=1200&q=80&auto=format&fit=crop" alt="Coconut palms on a Caicos shore" loading="lazy" />
+        <span class="ph-label">NORTH CAICOS · WILD · 06</span>
+      </div>
+      <div class="area-body">
+        <div class="row"><h3 class="display">North Caicos</h3><div class="no num">№ 06</div></div>
+        <p>The road less paved. Coconut groves, flamingos, raw acreage.</p>
+        <div class="range"><span class="eyebrow">Range</span><span class="num">$650K – $6M</span></div>
+      </div>
+    </article>
+  </div>
+</section>
+
+<section class="section" id="journeys" data-reveal>
+  <div class="section-head">
+    <div class="eyebrow">§ 04 — The life, not the square footage</div>
+    <h2 class="display">A house is the smallest part of <em>a life</em> on island.</h2>
+  </div>
+  <div class="journeys-grid">
+    <article class="journey-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1597675058833-5e3167a9bf5c?w=900&q=80&auto=format&fit=crop" alt="Boats on Caicos waters" loading="lazy" />
+        <span class="ph-label">SAILING · YACHTING</span>
+      </div>
+      <h3>Sailing &amp; Yachting</h3>
+      <p>Charter introductions. Slip availability at Blue Haven and South Side. Captain &amp; crew on retainer.</p>
+    </article>
+    <article class="journey-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1564763623496-579a9824ca25?w=900&q=80&auto=format&fit=crop" alt="Coconut palms on Caicos shore" loading="lazy" />
+        <span class="ph-label">FAMILY · SCHOOLS</span>
+      </div>
+      <h3>Family &amp; Schools</h3>
+      <p>British West Indies Collegiate, Provo Primary, Beaches Resort program. We make the introduction.</p>
+    </article>
+    <article class="journey-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1590170649029-01573b1923fe?w=900&q=80&auto=format&fit=crop" alt="Coastal trees Caicos" loading="lazy" />
+        <span class="ph-label">WELLNESS · SPA</span>
+      </div>
+      <h3>Wellness &amp; Spa</h3>
+      <p>COMO Shambhala access. Private trainers, Pilates, dive instructors, freediving. A short, vetted list.</p>
+    </article>
+    <article class="journey-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1709843036519-015b6b827478?w=900&q=80&auto=format&fit=crop" alt="Aerial Caicos beach with palms" loading="lazy" />
+        <span class="ph-label">CONCIERGE · STAFF</span>
+      </div>
+      <h3>Concierge &amp; Staff</h3>
+      <p>Estate managers, housekeepers, chefs, security. Discreet placement; references only by introduction.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section alt" id="process">
+  <div class="section-head">
+    <div class="eyebrow">§ 04 — Method</div>
+    <h2 class="display">Five chapters, beginning to <em>keys</em>.</h2>
+  </div>
+  <div>
+    <div class="process-row">
+      <div class="num">I.</div>
+      <h3 class="display">The Conversation</h3>
+      <p>A first call, no obligation. We listen. You describe the life you are designing. We are honest about what is, and is not, available this season.</p>
+    </div>
+    <div class="process-row">
+      <div class="num">II.</div>
+      <h3 class="display">The Brief</h3>
+      <p>A written introduction memorandum: islands, exposures, structures, fee implications, neighbors. Read in an evening; revisable on a flight.</p>
+    </div>
+    <div class="process-row">
+      <div class="num">III.</div>
+      <h3 class="display">The Voyage</h3>
+      <p>Three to five days on island. Private boat, no agents-in-suits. We see five properties, not fifty. You eat well.</p>
+    </div>
+    <div class="process-row">
+      <div class="num">IV.</div>
+      <h3 class="display">The Offer</h3>
+      <p>Counsel from your Caribbean attorney. We negotiate quietly. Stamp duty, escrow, NIB filings—handled.</p>
+    </div>
+    <div class="process-row">
+      <div class="num">V.</div>
+      <h3 class="display">The Keys</h3>
+      <p>Closing in 30–60 days. We meet the contractor on Tuesday. You arrive Saturday. The pantry is stocked.</p>
+    </div>
+  </div>
+</section>
+
+<section class="meet" id="meet" data-reveal>
+  <div class="meet-portrait">
+    <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=800&q=80&auto=format&fit=crop" alt="Portrait of Juanita Harris" loading="lazy" />
+    <span class="caption">JUANITA HARRIS · PROVIDENCIALES · MMXII</span>
+  </div>
+  <div>
+    <div class="eyebrow">§ 06 — A note from your broker</div>
+    <h2 class="display">A small island. A <em>smaller</em> circle.</h2>
+    <p>I moved to Providenciales in 2008 with a one-way ticket and a notebook. Seventeen years later I represent a deliberately limited number of buyers each year — twelve or fourteen, no more — across Provo, Pine Cay, and the cays beyond. Most arrive by referral. All of them stay.</p>
+    <p>If you are considering a home here, I would like to know what you are designing — the room your children will eat breakfast in, the view from the bath, the season you arrive. There is no portal, no listing wall. Just a conversation, then a brief, then a boat.</p>
+    <div class="meet-signature">— Juanita</div>
+    <div class="meet-credentials">
+      <div class="item">
+        <div class="num">$420M+</div>
+        <div class="label">In closed transactions</div>
+      </div>
+      <div class="item">
+        <div class="num">17</div>
+        <div class="label">Years on island</div>
+      </div>
+      <div class="item">
+        <div class="num">3</div>
+        <div class="label">Languages spoken</div>
+      </div>
+    </div>
+    <div class="meet-contact">
+      <a href="tel:+16495550142">Call · +1 (649) 555 0142</a>
+      <a href="mailto:juanita@privatecaicos.example">Email Juanita</a>
+      <a href="https://wa.me/16495550142" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="investment-grid">
+    <div>
+      <div class="eyebrow">§ 07 — The Numbers, Plainly</div>
+      <h2 class="display">A second home that quietly pays for itself.</h2>
+      <p class="lede">
+        We do not promise the moon. We do present the ledger. Most of our clients carry the property at a positive cash-flow within twenty-four months, and exit at a meaningful gain when the time comes.
+      </p>
+      <div class="ph investment-chart">
+        <img src="https://images.unsplash.com/photo-1514130667032-770bbfe7b7b2?w=1400&q=80&auto=format&fit=crop" alt="The blues and greens of the Caicos shoreline" loading="lazy" />
+        <span class="ph-label">CHART · APPRECIATION 2015–2025</span>
+      </div>
+    </div>
+    <div class="investment-table">
+      <div class="investment-row">
+        <div class="label">Avg. luxury appreciation, 2019–2025</div>
+        <div class="value"><div class="num">+11.4%</div><div class="eyebrow">p.a.</div></div>
+      </div>
+      <div class="investment-row">
+        <div class="label">Median rental yield, beachfront villa</div>
+        <div class="value"><div class="num">6.8%</div><div class="eyebrow">gross</div></div>
+      </div>
+      <div class="investment-row">
+        <div class="label">Occupancy, Grace Bay, peak season</div>
+        <div class="value"><div class="num">92%</div><div class="eyebrow">Dec–Apr</div></div>
+      </div>
+      <div class="investment-row">
+        <div class="label">Avg. nightly rate, 4-bed villa</div>
+        <div class="value"><div class="num">$3,400</div><div class="eyebrow">USD</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="wealth" id="wealth" data-reveal>
+  <div class="wealth-cover lift">
+    <div>
+      <div class="eyebrow">VOL. III · 2026</div>
+      <h3>The Caicos<br/><em>Wealth Report</em>.</h3>
+    </div>
+    <div class="meta">52pp · PDF · By introduction</div>
+  </div>
+  <div class="wealth-info">
+    <div class="eyebrow">§ 08 — A private dossier</div>
+    <h2 class="display">The 2026 buyer's intelligence, in one quiet binder.</h2>
+    <p>A short, considered annual on what is changing in Turks &amp; Caicos for buyers. Not a brochure; a working document for the people who quietly run the market.</p>
+    <ul>
+      <li><span class="num">I.</span> Off-market transactions, by island and price band</li>
+      <li><span class="num">II.</span> Stamp duty &amp; closing-cost models, with worked examples</li>
+      <li><span class="num">III.</span> The Permanent Residency Certificate, demystified</li>
+      <li><span class="num">IV.</span> Six houses we are watching, by appointment</li>
+    </ul>
+    <button type="button" class="btn lift" data-drawer-open>Request the dossier <span class="arrow">↗</span></button>
+  </div>
+</section>
+
+<section class="tax">
+  <div class="section-head">
+    <div class="eyebrow">§ 09 — Residency &amp; Tax</div>
+    <h2 class="display">A jurisdiction designed for the long view.</h2>
+  </div>
+  <div class="tax-grid">
+    <div class="tax-cell"><div class="num">$0</div><div class="label">Personal income tax</div></div>
+    <div class="tax-cell"><div class="num">$0</div><div class="label">Capital gains</div></div>
+    <div class="tax-cell"><div class="num">$0</div><div class="label">Inheritance &amp; estate</div></div>
+    <div class="tax-cell"><div class="num">$1M</div><div class="label">Investment threshold for PRC</div></div>
+  </div>
+  <p class="tax-fine">
+    The Permanent Residency Certificate is issued upon a qualifying real-estate investment of $1,000,000 on Providenciales (or $300,000 on a sister island). Bearer is exempt from work-permit requirements; the certificate holds for life.
+  </p>
+</section>
+
+<section class="section">
+  <div class="faq-grid">
+    <div>
+      <div class="eyebrow">§ 10 — Questions</div>
+      <h2 class="display">Asked, in plain language.</h2>
+    </div>
+    <div>
+      <details open>
+        <summary><span class="q display">Is this market open to foreign buyers?</span><span class="plus">+</span></summary>
+        <p>Wholly. There is no restriction on foreign ownership of freehold property in the Turks &amp; Caicos Islands. Title is held in fee simple.</p>
+      </details>
+      <details>
+        <summary><span class="q display">What are the closing costs?</span><span class="plus">+</span></summary>
+        <p>Stamp duty is 6.5%–10% depending on parcel value. Legal, recording, and survey typically add ~1.5%. We provide a written estimate before any offer.</p>
+      </details>
+      <details>
+        <summary><span class="q display">Can the property be rented when we are not there?</span><span class="plus">+</span></summary>
+        <p>Yes. Most of our beachfront clients elect a rental program. Net yields run 5–8% on well-positioned villas.</p>
+      </details>
+      <details>
+        <summary><span class="q display">How long does a transaction take?</span><span class="plus">+</span></summary>
+        <p>A cash purchase closes in 30–45 days. Financed transactions, 60–90.</p>
+      </details>
+      <details>
+        <summary><span class="q display">Are mortgages available?</span><span class="plus">+</span></summary>
+        <p>Yes — typically 65–70% LTV from a small set of local and offshore lenders. We make introductions.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="field-guide" id="journal" data-reveal>
+  <div class="section-head">
+    <div class="eyebrow">§ 11 — The field guide</div>
+    <h2 class="display">A short shelf, written for buyers.</h2>
+  </div>
+  <div class="journal-grid">
+    <article class="journal-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1514130546524-5da6eaa36b72?w=900&q=80&auto=format&fit=crop" alt="Long Bay aerial flats" loading="lazy" />
+        <span class="ph-label">CHAPTER I</span>
+      </div>
+      <div class="meta"><span>READING TIME · 12 MIN</span><span>FEB 2026</span></div>
+      <h3>Long Bay or Grace Bay: a buyer's field guide.</h3>
+      <p>Twelve miles apart, two different lives. Where to swim, where to dock, where to put the children, where to age into a hammock.</p>
+      <span class="read">Read the chapter <span class="arrow">↗</span></span>
+    </article>
+    <article class="journal-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1514130667032-770bbfe7b7b2?w=900&q=80&auto=format&fit=crop" alt="Caicos shoreline" loading="lazy" />
+        <span class="ph-label">CHAPTER II</span>
+      </div>
+      <div class="meta"><span>READING TIME · 4 MIN</span><span>JAN 2026</span></div>
+      <h3>Stamp duty, closing costs &amp; the small print.</h3>
+      <p>What 6.5% to 10% actually means on a $7M closing — with a worked example and the three line items most buyers miss.</p>
+      <span class="read">Read the chapter <span class="arrow">↗</span></span>
+    </article>
+    <article class="journal-card lift">
+      <div class="ph">
+        <img src="https://images.unsplash.com/photo-1709843036519-015b6b827478?w=900&q=80&auto=format&fit=crop" alt="Aerial Caicos with palms" loading="lazy" />
+        <span class="ph-label">CHAPTER III</span>
+      </div>
+      <div class="meta"><span>READING TIME · 8 MIN</span><span>DEC 2025</span></div>
+      <h3>Inside a $14M Parrot Cay estate.</h3>
+      <p>How a New York family spent five days, saw three properties, and chose the smallest of the three. A short story, in pictures.</p>
+      <span class="read">Read the chapter <span class="arrow">↗</span></span>
+    </article>
+  </div>
+</section>
+
+<section class="pull-quote" data-reveal>
+  <blockquote>
+    Juanita found us a house we did not know we wanted, on an island we had been told to avoid, for a price our accountant has not stopped congratulating us about.
+    <cite>M.V. — New York · Pine Cay, 2024</cite>
+  </blockquote>
+</section>
+
+<section class="discretion" data-reveal>
+  <div class="eyebrow">§ 12 — A note on discretion</div>
+  <div>
+    <h3 class="display">Your inquiry is private.</h3>
+    <p>We do not list clients. We do not share names. No transaction is published, photographed, or written about without explicit consent. The smallest islands have the longest memories — we keep ours short on purpose.</p>
+  </div>
+</section>
+
+<section class="final" id="contact-final">
+  <div class="eyebrow">§ 13 — Begin</div>
+  <h2 class="display">
+    The shore is <em>quieter</em><br />
+    with someone who lives there.
+  </h2>
+  <p>A first conversation, by appointment. No pitch. No portal. A glass of something cold and an honest hour of your time.</p>
+  <button class="btn lift" data-drawer-open>Schedule a private consultation <span class="arrow">↗</span></button>
+</section>
+
+<footer class="site">
+  <div>
+    <div class="brand">Juanita Harris<span class="dot">.</span></div>
+    <p>Private brokerage. Providenciales, Turks &amp; Caicos Islands, BWI. By appointment.</p>
+  </div>
+  <div>
+    <div class="eyebrow col-head">Office</div>
+    <div class="item">Suite 4, Regent Village</div>
+    <div class="item">Providenciales, TCI</div>
+    <div class="item"><a href="tel:+16495550142">+1 (649) 555 0142</a></div>
+    <div class="item"><a href="mailto:juanita@privatecaicos.example">juanita@privatecaicos.example</a></div>
+  </div>
+  <div>
+    <div class="eyebrow col-head">Hours</div>
+    <div class="item">Mon–Sat, 9–18 AST</div>
+    <div class="item">After hours by request</div>
+  </div>
+  <div>
+    <div class="eyebrow col-head">Elsewhere</div>
+    <div class="item"><a href="#">Instagram</a></div>
+    <div class="item"><a href="#">The Journal</a></div>
+    <div class="item"><a href="#">Press kit</a></div>
+    <div class="item"><a href="#">Privacy</a></div>
+  </div>
+  <div class="credentials">
+    <span>RECT-NO. 0481</span>
+    <span>·</span>
+    <span>CIREBA Member</span>
+    <span>·</span>
+    <span>Christie's International Real Estate Network</span>
+    <span>·</span>
+    <span>Equal Housing Opportunity</span>
+    <span>·</span>
+    <span>© 2026 Private Caicos LLC</span>
+  </div>
+</footer>
+
+</main>
+
+<!-- Sticky mobile CTA -->
+<div class="sticky-cta" role="region" aria-label="Quick contact">
+  <a class="btn is-secondary" href="tel:+16495550142">Call</a>
+  <button type="button" class="btn" data-drawer-open>Private inquiry</button>
+</div>
+
+<!-- Inquiry drawer -->
+<aside class="drawer" data-drawer aria-hidden="true" aria-label="Private inquiry">
+  <div class="drawer-head">
+    <span class="title">Begin a conversation</span>
+    <button type="button" class="drawer-close" data-drawer-close aria-label="Close">×</button>
+  </div>
+  <div class="drawer-progress" aria-hidden="true"><span data-progress></span></div>
+  <form class="drawer-body" data-multistep>
+    <div class="drawer-step is-active" data-step>
+      <div class="eyebrow">A. 01 — The brief</div>
+      <h3>What are you imagining?</h3>
+      <div class="field"><label for="d-island">Island of interest</label>
+        <select id="d-island">
+          <option>No preference yet</option>
+          <option>Providenciales — Grace Bay</option>
+          <option>Providenciales — Long Bay</option>
+          <option>Providenciales — Leeward</option>
+          <option>Parrot Cay (private)</option>
+          <option>Pine Cay</option>
+          <option>North &amp; Middle Caicos</option>
+        </select>
+      </div>
+      <div class="field"><label for="d-budget">Budget band</label>
+        <select id="d-budget">
+          <option>$1M – $3M</option>
+          <option>$3M – $7M</option>
+          <option>$7M – $15M</option>
+          <option>$15M+</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="drawer-step" data-step>
+      <div class="eyebrow">A. 02 — The intent</div>
+      <h3>How will it be used?</h3>
+      <div class="pill-group">
+        <label class="pill"><input type="radio" name="use" /> Primary residence</label>
+        <label class="pill"><input type="radio" name="use" /> Second home</label>
+        <label class="pill"><input type="radio" name="use" /> Investment / rental</label>
+        <label class="pill"><input type="radio" name="use" /> Residency / citizenship</label>
+      </div>
+      <div class="field" style="margin-top: 24px;">
+        <label for="d-timeline">Timeline</label>
+        <select id="d-timeline">
+          <option>Within 90 days</option>
+          <option>Within 6 months</option>
+          <option>Within 12 months</option>
+          <option>Just researching</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="drawer-step" data-step>
+      <div class="eyebrow">A. 03 — The introduction</div>
+      <h3>Where can we reach you?</h3>
+      <div class="field"><label for="d-name">Name</label><input id="d-name" placeholder="Eleanor M." /></div>
+      <div class="field"><label for="d-email">Email</label><input id="d-email" type="email" placeholder="eleanor@example.com" /></div>
+      <div class="field"><label for="d-phone">Mobile (optional)</label><input id="d-phone" type="tel" placeholder="+1 …" /></div>
+      <div class="field"><label for="d-notes">Notes</label><input id="d-notes" placeholder="Beachfront, sleeps 12, by Christmas." /></div>
+    </div>
+
+    <div class="drawer-success">
+      <div class="eyebrow">Thank you</div>
+      <h3>The introduction is on its way.</h3>
+      <p>A member of Juanita's office will respond personally within one business day. Your inquiry remains private.</p>
+    </div>
+  </form>
+  <div class="drawer-foot">
+    <button type="button" class="btn-text" data-back>← Back</button>
+    <button type="button" class="btn-primary" data-next>Continue <span aria-hidden="true">↗</span></button>
+    <button type="submit" form="" class="btn-primary" style="display:none;" data-submit>Send <span aria-hidden="true">↗</span></button>
+  </div>
+</aside>
+<div class="drawer-scrim" data-drawer-close aria-hidden="true"></div>
+
+<script src="scripts/site.js" defer></script>
+
+</body>
+</html>

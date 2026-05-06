@@ -509,16 +509,20 @@
   /* ----- Meet Juanita (dark) ----- */
   .meet {
     padding: 160px 56px;
-    display: grid; grid-template-columns: 1fr 1.4fr; gap: 80px;
+    display: grid; grid-template-columns: minmax(280px, 400px) 1fr; gap: 80px;
     align-items: start;
   }
   .meet-portrait {
-    aspect-ratio: 4 / 5;
+    aspect-ratio: 439 / 658;
     background: var(--deep-2);
     position: relative;
     overflow: hidden;
+    max-width: 400px;
   }
-  .meet-portrait img { width: 100%; height: 100%; object-fit: cover; }
+  .meet-portrait img {
+    width: 100%; height: 100%; object-fit: cover;
+    object-position: center 30%;
+  }
   .meet-portrait .caption {
     position: absolute; left: 14px; bottom: 14px;
     font-family: "JetBrains Mono", monospace;
@@ -783,6 +787,7 @@
 <div class="mobile-menu" data-mobile-menu aria-hidden="true">
   <a href="#islands">Islands</a>
   <a href="#process">Process</a>
+  <a href="#meet">Juanita</a>
   <a href="#journal">Journal</a>
   <a href="#contact-final">Begin a conversation</a>
   <div class="menu-foot">
@@ -808,6 +813,7 @@
       <div class="nav-links">
         <a href="#islands">Islands</a>
         <a href="#process">Process</a>
+        <a href="#meet">Juanita</a>
         <a href="#journal">Journal</a>
       </div>
       <button class="btn btn-ghost" data-drawer-open>Begin <span class="arrow">↗</span></button>
@@ -1075,10 +1081,46 @@
   </div>
 </section>
 
+<section class="meet" id="meet" data-reveal>
+  <div class="meet-portrait">
+    <img src="assets/juanita-harris.jpg" alt="Juanita Harris" loading="lazy" />
+    <span class="caption">JUANITA HARRIS · KW CITY VIEWS · BERGEN &amp; HUDSON</span>
+  </div>
+  <div class="meet-head">
+    <div class="label">§ 06 — A note from your broker</div>
+    <h2>
+      <span class="display-up">A small island.</span><br />
+      <span class="display" style="color: var(--sun);">A smaller circle.</span>
+    </h2>
+    <p>I built my practice in Bergen and Hudson Counties — Fort Lee, Englewood, Alpine, Demarest, Edgewater, Hoboken — placing families in upscale homes, modern condos, and the kind of townhouses that don't show on Zillow until they're already sold. Twenty years in, I represent a deliberately limited number of buyers each year, most of whom arrive by referral.</p>
+    <p>Turks &amp; Caicos is the natural next chapter for the clients I serve. Many of them already winter in the Caribbean; a growing number are buying there. I bring the same quiet method to Provo, Pine Cay, and the cays beyond — a brief, a boat, and a short list of houses worth seeing. There is no portal. Just a conversation.</p>
+    <div class="meet-signature">— Juanita</div>
+    <div class="meet-credentials">
+      <div class="item">
+        <div class="num">$420M+</div>
+        <div class="label">In closed transactions</div>
+      </div>
+      <div class="item">
+        <div class="num">20</div>
+        <div class="label">Years in practice</div>
+      </div>
+      <div class="item">
+        <div class="num">KW</div>
+        <div class="label">City Views Realty</div>
+      </div>
+    </div>
+    <div class="meet-contact">
+      <a href="tel:+12016746069">Call · +1 (201) 674 6069</a>
+      <a href="mailto:juanita@upscalehomesforyou.com">Email Juanita</a>
+      <a href="https://wa.me/12016746069" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</section>
+
 <section class="investment">
   <div class="investment-grid">
     <div>
-      <div class="label">§ 06 — The numbers, plainly</div>
+      <div class="label">§ 07 — The numbers, plainly</div>
       <h2 class="head">
         <span class="display-up">A second home</span><br />
         <span class="display" style="color: var(--sun);">that pays for itself.</span>
@@ -1125,7 +1167,7 @@
     <div class="meta">52pp · PDF · By introduction</div>
   </div>
   <div class="wealth-info">
-    <div class="label">§ 07 — A private dossier</div>
+    <div class="label">§ 08 — A private dossier</div>
     <h2>
       <span class="display-up">The 2026 buyer's intelligence,</span><br />
       <span class="display" style="color: var(--sun);">in one quiet binder.</span>
@@ -1142,7 +1184,7 @@
 </section>
 
 <section class="section">
-  <div class="label">§ 08 — Residency &amp; Tax</div>
+  <div class="label">§ 09 — Residency &amp; Tax</div>
   <h2 class="head">
     <span class="display-up">A jurisdiction</span> <span class="display" style="color: var(--sun);">built for the long view.</span>
   </h2>
@@ -1160,7 +1202,7 @@
 <section class="faq">
   <div class="faq-grid">
     <div>
-      <div class="label">§ 09 — Questions</div>
+      <div class="label">§ 10 — Questions</div>
       <h2 class="head">
         <span class="display-up">Asked,</span><br />
         <span class="display accent">plainly.</span>
@@ -1192,7 +1234,7 @@
 </section>
 
 <section class="field-guide" id="journal" data-reveal>
-  <div class="label">§ 10 — The field guide</div>
+  <div class="label">§ 11 — The field guide</div>
   <h2>
     <span class="display-up">A short shelf,</span><br />
     <span class="display accent">written for buyers.</span>
@@ -1232,7 +1274,7 @@
 </section>
 
 <section class="discretion" data-reveal>
-  <div class="label">§ 11 — A note on discretion</div>
+  <div class="label">§ 12 — A note on discretion</div>
   <div>
     <h3>Your inquiry is private.</h3>
     <p>We do not list clients. We do not share names. No transaction is published, photographed, or written about without explicit consent. The smallest islands have the longest memories — we keep ours short on purpose.</p>
@@ -1245,7 +1287,7 @@
   </div>
   <div class="scrim"></div>
   <div class="content">
-    <div class="label">§ 12 — A first conversation</div>
+    <div class="label">§ 13 — A first conversation</div>
     <h2>
       <span class="display-up">The shore is</span><br />
       <span class="display" style="color: var(--sun);">quieter</span> <span class="display-up">with someone who lives there.</span>

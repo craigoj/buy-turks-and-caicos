@@ -25,3 +25,6 @@ yarn-error.log*
 
 # Dependencies (none today, but future-proofing)
 node_modules/
+
+# Original photo backups (excluded from repo)
+assets/original/

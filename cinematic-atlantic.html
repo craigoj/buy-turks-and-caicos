@@ -175,38 +175,79 @@
   }
 
   .hero-bottom {
-    display: grid; grid-template-columns: 1fr 420px; gap: 32px;
+    display: grid; grid-template-columns: 1fr 560px; gap: 40px;
     align-items: end;
   }
   .hero-ctas { display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
 
   /* ----- Hero form ----- */
   .hero-form {
-    background: rgba(14,31,42,0.85);
-    backdrop-filter: blur(10px);
-    border: 1px solid var(--line);
-    padding: 28px;
+    background: rgba(14,31,42,0.92);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border: 1px solid rgba(245,239,225,0.22);
+    padding: 40px;
+    box-shadow: 0 24px 60px -20px rgba(0,0,0,0.55);
   }
-  .hero-form .label { margin-bottom: 14px; color: var(--sun); }
+  .hero-form .label {
+    margin-bottom: 14px;
+    color: var(--sun);
+    font-size: 12px;
+    letter-spacing: 0.24em;
+  }
+  .hero-form h3 {
+    font-family: "Cormorant Garamond", serif;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: -0.02em;
+    color: var(--cream);
+    font-size: 36px;
+    line-height: 1;
+    margin: 0 0 28px;
+  }
+  .hero-form h3 .upright {
+    font-style: normal;
+    font-family: "Inter", sans-serif;
+    font-weight: 500;
+    letter-spacing: -0.03em;
+    color: var(--cream);
+  }
   .hero-form .row2 {
-    display: grid; grid-template-columns: 1fr 1fr; gap: 12px;
-    margin-bottom: 12px;
+    display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    margin-bottom: 14px;
   }
   .d3-input {
     background: transparent;
     border: none;
     border-bottom: 1px solid rgba(245,239,225,0.3);
-    padding: 12px 0;
-    font-size: 14px;
+    padding: 14px 0;
+    font-size: 16px;
     font-family: inherit;
     outline: none;
     color: var(--cream);
     width: 100%;
+    transition: border-color .25s;
   }
+  .d3-input:focus { border-bottom-color: var(--sun); }
   .d3-input::placeholder { color: rgba(245,239,225,0.45); }
-  .hero-form .full { width: 100%; margin-bottom: 12px; }
-  .hero-form select.full { margin-bottom: 16px; }
-  .hero-form .submit { width: 100%; justify-content: center; }
+  .hero-form .full { width: 100%; margin-bottom: 14px; }
+  .hero-form select.full { margin-bottom: 24px; }
+  .hero-form .submit {
+    width: 100%; justify-content: center;
+    padding: 22px 28px;
+    font-size: 14px;
+    letter-spacing: 0.14em;
+    margin-top: 4px;
+  }
+  .hero-form .footnote {
+    margin-top: 18px;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 10px;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: rgba(245,239,225,0.5);
+    text-align: center;
+  }
 
   /* ----- Section primitives ----- */
   .section { padding: 160px 56px 96px; position: relative; }
@@ -841,12 +882,13 @@
         <button class="btn btn-ghost">Read the field guide ↓</button>
       </div>
       <form class="hero-form" data-inline-form>
-        <div class="label">● Begin a conversation</div>
+        <div class="label">● BEGIN A CONVERSATION</div>
+        <h3><span class="upright">A first</span> introduction.</h3>
         <div class="row2">
-          <input class="d3-input" placeholder="First name" />
-          <input class="d3-input" placeholder="Last name" />
+          <input class="d3-input" placeholder="First name" required />
+          <input class="d3-input" placeholder="Last name" required />
         </div>
-        <input class="d3-input full" type="email" placeholder="Email" />
+        <input class="d3-input full" type="email" placeholder="Email" required />
         <select class="d3-input full">
           <option>Budget — $1M – $3M</option>
           <option>$3M – $7M</option>
@@ -854,6 +896,7 @@
           <option>$15M+</option>
         </select>
         <button type="submit" class="btn lift submit">Request a private call <span class="arrow">↗</span></button>
+        <p class="footnote">By appointment · Reply within one business day</p>
       </form>
     </div>
   </div>

@@ -2,6 +2,12 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [
+    { "source": "/cinematic-atlantic", "destination": "/", "permanent": true },
+    { "source": "/cinematic-atlantic.html", "destination": "/", "permanent": true },
+    { "source": "/editorial-atelier", "destination": "/", "permanent": true },
+    { "source": "/editorial-atelier.html", "destination": "/", "permanent": true }
+  ],
   "headers": [
     {
       "source": "/(.*)",

@@ -17,8 +17,9 @@
 <meta name="twitter:description" content="Luxury investment and lifestyle opportunities in Turks &amp; Caicos — guided with insight, discretion, and personal connection." />
 <meta name="twitter:image" content="assets/og-image.svg" />
 
-<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
-<link rel="apple-touch-icon" href="assets/favicon.svg" />
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png" />
+<link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
 
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -157,6 +158,16 @@
   }
   .wordmark .sep { color: var(--sun); }
   .wordmark .sub { color: var(--muted); }
+  .wordmark-logo {
+    display: block;
+    height: 56px;
+    width: auto;
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 2px;
+    box-shadow: 0 8px 24px -12px rgba(0,0,0,0.5);
+  }
+  footer.site .wordmark-logo { height: 72px; margin-bottom: 16px; padding: 8px 16px; }
   .nav-links { display: flex; gap: 36px; font-size: 13px; }
   .nav-links a:hover { color: var(--sun); }
 
@@ -1392,7 +1403,7 @@
     <div class="tax-cell"><div class="num">$1M</div><div class="l">For permanent residency</div></div>
   </div>
   <p class="tax-fine">
-    The Permanent Residency Certificate is issued upon a qualifying real-estate investment of $1,000,000 on Providenciales (or $300,000 on a sister island). Bearer is exempt from work-permit requirements; the certificate holds for life.
+    The Permanent Residency Certificate is issued upon a qualifying real-estate investment — $1,000,000 on Providenciales, or $300,000 on a sister island (Grand Turk, Salt Cay, and South, Middle, or North Caicos) — together with a one-time $25,000 government fee. The certificate holds for life and grants the right to reside indefinitely. The right to work is not automatic; that is handled by separate permit.
   </p>
   <p class="inline-cta">
     Want the worked example for your situation? <button type="button" class="link-cta" data-drawer-open>Schedule a quiet call <span class="arrow">↗</span></button>
@@ -1812,9 +1823,15 @@
   </div>
 </section>
 
+<section class="brand-mark">
+  <div class="brand-mark-frame">
+    <img src="assets/newlogo-card.png" alt="BuyTurksandCaicos.com — Your Island. Your Lifestyle. Your Investment." />
+  </div>
+</section>
+
 <footer class="site">
   <div>
-    <div class="wordmark">Juanita Harris <span class="sep">—</span> <span class="sub">Buy Turks &amp; Caicos</span></div>
+    <img class="wordmark-logo" src="assets/newlogo-card.png" alt="BuyTurksandCaicos.com — Juanita Harris" />
     <p>Private brokerage. By appointment, by introduction, by the sea.</p>
     <div class="footer-url"><a href="https://buyturksandcaicos.com">BuyTurksandCaicos.com</a></div>
   </div>

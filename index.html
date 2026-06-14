@@ -24,7 +24,6 @@
 <link rel="preconnect" href="https://fonts.googleapis.com" />
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 <link rel="preconnect" href="https://images.unsplash.com" />
-<link rel="preconnect" href="https://videos.pexels.com" />
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=Inter:wght@200;300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
 <link rel="stylesheet" href="styles/shared.css" />
@@ -133,6 +132,7 @@
     width: 100%; height: 100%; object-fit: cover;
     display: block;
   }
+  .hero .bg img { filter: saturate(1.14) brightness(1.07) contrast(1.03); }
   .final .bg video, .final .bg img {
     width: 100%; height: 100%; object-fit: cover;
     display: block;
@@ -140,8 +140,8 @@
   .hero .scrim {
     position: absolute; inset: 0;
     background:
-      linear-gradient(180deg, rgba(14,31,42,0.72) 0%, rgba(14,31,42,0.4) 38%, rgba(14,31,42,0.62) 62%, rgba(14,31,42,0.92) 100%),
-      radial-gradient(120% 80% at 15% 55%, rgba(14,31,42,0.42), transparent 55%);
+      linear-gradient(180deg, rgba(14,31,42,0.24) 0%, rgba(14,31,42,0.02) 34%, rgba(14,31,42,0) 60%, rgba(14,31,42,0.6) 100%),
+      linear-gradient(90deg, rgba(14,31,42,0.32) 0%, rgba(14,31,42,0.04) 44%, transparent 68%);
   }
   .hero .layout {
     position: relative;
@@ -187,7 +187,7 @@
     max-width: 560px;
     text-shadow: 0 1px 14px rgba(14,31,42,0.55), 0 1px 2px rgba(14,31,42,0.4);
   }
-  .hero h1 { text-shadow: 0 2px 24px rgba(14,31,42,0.4); }
+  .hero h1 { text-shadow: 0 2px 28px rgba(14,31,42,0.55), 0 1px 3px rgba(14,31,42,0.4); }
 
   .hero-bottom {
     display: grid; grid-template-columns: 1fr 560px; gap: 40px;
@@ -1238,13 +1238,11 @@
 
 <section class="hero">
   <div class="bg">
-    <video
-      autoplay muted loop playsinline preload="auto"
-      poster="https://images.unsplash.com/photo-1536276214783-1ae17228588a?w=1920&q=80&auto=format&fit=crop"
-      aria-hidden="true">
-      <source src="https://videos.pexels.com/video-files/11419039/11419039-uhd_2560_1440_24fps.mp4" type="video/mp4" />
-      <source src="https://videos.pexels.com/video-files/11418947/11418947-uhd_2560_1440_24fps.mp4" type="video/mp4" />
-    </video>
+    <img
+      src="assets/grace-bay-hero.jpg"
+      alt="Brilliant white sand and vivid turquoise water at Grace Bay, Turks &amp; Caicos"
+      fetchpriority="high"
+      aria-hidden="true" />
   </div>
   <div class="scrim"></div>
   <div class="layout">

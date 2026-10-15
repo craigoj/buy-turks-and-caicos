@@ -20,7 +20,7 @@ async function send(key, payload) {
 export default async function handler(req, res) {
   if (req.method !== 'POST') return res.status(405).json({ ok: false });
 
-  const key = process.env.RESEND_API_KEY;
+  const key = process.env.RESEND_API_KEY || process.env.resend_key;
   const to = process.env.INQUIRY_TO || 'juanita@buyturksandcaicos.com';
   const backup = process.env.INQUIRY_BACKUP; // optional, comma separated
   const from = process.env.INQUIRY_FROM || 'BuyTurksandCaicos.com <inquiries@mail.ctrltechhq.com>';

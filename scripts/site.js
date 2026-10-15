@@ -84,44 +84,73 @@
     const form = drawer.querySelector('[data-multistep]');
     if (form) {
       const steps = Array.from(form.querySelectorAll('[data-step]'));
-      const progress = form.querySelector('[data-progress]');
+      const progress = form.querySelector('[data-progress]') || drawer.querySelector('[data-progress]');
+      const submitBtn = drawer.querySelector('[data-submit]');
+      const submitLabel = drawer.querySelector('[data-submit-label]');
+      const backBtn = drawer.querySelector('[data-back]');
       let current = 0;
       const show = (i) => {
         steps.forEach((s, idx) => s.classList.toggle('is-active', idx === i));
         if (progress) progress.style.transform = `scaleX(${(i + 1) / steps.length})`;
+        if (submitLabel) submitLabel.textContent = i === steps.length - 1 ? 'Send' : 'Continue';
+        if (backBtn) backBtn.style.visibility = i === 0 ? 'hidden' : 'visible';
       };
       show(0);
-      form.querySelectorAll('[data-next]').forEach((b) =>
-        b.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (current < steps.length - 1) { current++; show(current); }
-        })
-      );
-      form.querySelectorAll('[data-back]').forEach((b) =>
-        b.addEventListener('click', (e) => {
-          e.preventDefault();
-          if (current > 0) { current--; show(current); }
-        })
-      );
-      form.addEventListener('submit', (e) => {
+      if (backBtn) backBtn.addEventListener('click', (e) => {
         e.preventDefault();
-        form.classList.add('is-submitted');
+        if (current > 0) { current--; show(current); }
+      });
+      form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        if (current < steps.length - 1) { current++; show(current); return; }
+        await sendInquiry(form, submitBtn, () => {
+          drawer.classList.add('is-submitted');
+          if (submitBtn) submitBtn.style.display = 'none';
+          if (backBtn) backBtn.style.display = 'none';
+        });
       });
     }
   }
 
-  // ---- Inline form success state ----
+  // ---- Inquiry delivery ----
+  // Posts to /api/inquiry. Success is only shown once the server confirms it
+  // stored and forwarded the message; any failure leaves the form filled in.
+  async function sendInquiry(form, btn, onSuccess) {
+    const errEl = form.querySelector('.form-error');
+    const showErr = (msg) => { if (errEl) { errEl.textContent = msg; errEl.hidden = false; } };
+    if (errEl) errEl.hidden = true;
+    const data = Object.fromEntries(new FormData(form).entries());
+    data.source = form.dataset.source || 'site';
+    const email = String(data.email || '').trim();
+    if (!String(data.name || '').trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+      showErr('Please add your name and a valid email so Juanita can reply.');
+      return;
+    }
+    const label = btn ? btn.innerHTML : '';
+    if (btn) { btn.disabled = true; btn.textContent = 'Sending…'; }
+    try {
+      const res = await fetch('/api/inquiry', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data),
+      });
+      if (!res.ok) throw new Error('status ' + res.status);
+      onSuccess();
+    } catch (err) {
+      showErr('That did not go through. Please try again, or email juanita@buyturksandcaicos.com or call +1 (201) 674 6069.');
+      if (btn) { btn.disabled = false; btn.innerHTML = label; }
+    }
+  }
+
+  // ---- Inline (hero) form ----
   document.querySelectorAll('[data-inline-form]').forEach((form) => {
     form.addEventListener('submit', (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
-      if (btn) {
-        btn.disabled = true;
-        const original = btn.textContent.trim();
-        btn.dataset.original = original;
-        btn.innerHTML = 'Thank you · we will be in touch';
-      }
-      form.classList.add('is-submitted');
+      sendInquiry(form, btn, () => {
+        if (btn) { btn.disabled = true; btn.innerHTML = 'Thank you · we will be in touch'; }
+        form.classList.add('is-submitted');
+      });
     });
   });
 

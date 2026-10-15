@@ -23,7 +23,7 @@ export default async function handler(req, res) {
   const key = process.env.RESEND_API_KEY || process.env.resend_key;
   const to = process.env.INQUIRY_TO || 'juanita@buyturksandcaicos.com';
   const backup = process.env.INQUIRY_BACKUP; // optional, comma separated
-  const from = process.env.INQUIRY_FROM || 'BuyTurksandCaicos.com <inquiries@mail.ctrltechhq.com>';
+  const from = process.env.INQUIRY_FROM || 'BuyTurksandCaicos.com <noreply@mail.ctrltechhq.com>';
   if (!key) {
     console.error('inquiry: RESEND_API_KEY missing');
     return res.status(500).json({ ok: false });

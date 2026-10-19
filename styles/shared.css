@@ -83,6 +83,7 @@ button { font-family: inherit; cursor: pointer; }
   width: 100%;
 }
 .field input::placeholder { opacity: 0.5; }
+[data-heard-other][hidden] { display: none; }
 
 /* ----- Hover lift ----- */
 .lift { transition: transform .35s cubic-bezier(.2,.7,.2,1), box-shadow .35s; }

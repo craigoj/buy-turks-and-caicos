@@ -4,6 +4,43 @@
 (function () {
   'use strict';
 
+  // ---- Where the visitor came from ----
+  // Recorded once, on the first page a visitor lands on, and kept in this
+  // browser so an inquiry sent days later still shows the original source.
+  // If storage is blocked, the source of the current visit is used instead.
+  const SRC_KEY = 'btc_first_touch';
+  const readSource = () => {
+    try { return JSON.parse(localStorage.getItem(SRC_KEY) || 'null'); } catch (e) { return null; }
+  };
+  const currentSource = () => {
+    const q = new URLSearchParams(location.search);
+    let ref = '';
+    try {
+      if (document.referrer && new URL(document.referrer).host !== location.host) ref = document.referrer;
+    } catch (e) { /* malformed referrer */ }
+    const s = { ref, landing: location.pathname + location.search, at: new Date().toISOString() };
+    ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content'].forEach((k) => {
+      if (q.get(k)) s[k] = q.get(k);
+    });
+    if (q.get('gclid')) s.gclid = 'yes';
+    if (q.get('fbclid')) s.fbclid = 'yes';
+    return s;
+  };
+  let firstTouch = readSource();
+  if (!firstTouch) {
+    firstTouch = currentSource();
+    try { localStorage.setItem(SRC_KEY, JSON.stringify(firstTouch)); } catch (e) { /* storage blocked */ }
+  }
+
+  // ---- "How did you hear" : show the Other box only when Other is picked ----
+  document.querySelectorAll('[data-heard]').forEach((sel) => {
+    const other = sel.form && sel.form.querySelector('[data-heard-other]');
+    if (!other) return;
+    const sync = () => { other.hidden = sel.value !== 'Other'; };
+    sel.addEventListener('change', sync);
+    sync();
+  });
+
   // ---- Scroll reveals (IntersectionObserver) ----
   const revealEls = document.querySelectorAll('[data-reveal]');
   if (revealEls.length && 'IntersectionObserver' in window) {
@@ -121,6 +158,8 @@
     if (errEl) errEl.hidden = true;
     const data = Object.fromEntries(new FormData(form).entries());
     data.source = form.dataset.source || 'site';
+    if (data.heard !== 'Other') delete data.heard_other;
+    Object.keys(firstTouch || {}).forEach((k) => { data['src_' + k] = firstTouch[k]; });
     const email = String(data.email || '').trim();
     if (!String(data.name || '').trim() || !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
       showErr('Please add your name and a valid email so Juanita can reply.');

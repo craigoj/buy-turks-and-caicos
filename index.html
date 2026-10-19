@@ -1302,6 +1302,22 @@
           <label for="hf-notes">Notes</label>
           <input id="hf-notes" name="notes" class="d3-input" placeholder="Beachfront, sleeps 12, by Christmas." />
         </div>
+        <div class="hero-form-field">
+          <label for="hf-heard">How did you hear about BuyTurksandCaicos.com?</label>
+          <select id="hf-heard" name="heard" class="d3-input" data-heard>
+            <option value="">Choose one (optional)</option>
+            <option>Google</option>
+            <option>Social media</option>
+            <option>Referral</option>
+            <option>Real estate professional</option>
+            <option>Personal meeting</option>
+            <option>Other</option>
+          </select>
+        </div>
+        <div class="hero-form-field" data-heard-other hidden>
+          <label for="hf-heard-other">Where did you hear about us?</label>
+          <input id="hf-heard-other" name="heard_other" class="d3-input" maxlength="120" />
+        </div>
         <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
         <p class="form-error" role="alert" hidden style="color:#b3261e;font-size:14px;margin:8px 0 0"></p>
         <button type="submit" class="btn lift submit">Request introduction <span class="arrow">↗</span></button>
@@ -1921,6 +1937,18 @@
       <div class="field"><label for="d-email">Email</label><input id="d-email" name="email" type="email" placeholder="eleanor@example.com" required autocomplete="email" /></div>
       <div class="field"><label for="d-phone">Mobile (optional)</label><input id="d-phone" name="phone" type="tel" placeholder="+1 …" autocomplete="tel" /></div>
       <div class="field"><label for="d-notes">Notes</label><input id="d-notes" name="notes" placeholder="Beachfront, sleeps 12, by Christmas." /></div>
+      <div class="field"><label for="d-heard">How did you hear about BuyTurksandCaicos.com?</label>
+        <select id="d-heard" name="heard" data-heard>
+          <option value="">Choose one (optional)</option>
+          <option>Google</option>
+          <option>Social media</option>
+          <option>Referral</option>
+          <option>Real estate professional</option>
+          <option>Personal meeting</option>
+          <option>Other</option>
+        </select>
+      </div>
+      <div class="field" data-heard-other hidden><label for="d-heard-other">Where did you hear about us?</label><input id="d-heard-other" name="heard_other" maxlength="120" /></div>
       <input type="text" name="website" tabindex="-1" autocomplete="off" aria-hidden="true" style="position:absolute;left:-9999px;height:0;width:0;opacity:0">
       <p class="form-error" role="alert" hidden style="color:#b3261e;font-size:14px;margin:8px 0 0"></p>
     </div>
